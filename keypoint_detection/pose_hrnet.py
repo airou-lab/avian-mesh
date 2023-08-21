@@ -326,7 +326,7 @@ class PoseHighResolutionNet(nn.Module):
             self.stage4_cfg, num_channels, multi_scale_output=True)
 
         ##### modification to output keypoints and mask prediction #####
-        last_inp_channels = np.int(np.sum(pre_stage_channels))
+        last_inp_channels = np.int_(np.sum(pre_stage_channels))
 
         self.final_layer = nn.Sequential(
             nn.Conv2d(

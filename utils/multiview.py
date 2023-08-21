@@ -30,8 +30,17 @@ def fit_geometry(bird, keypoints, frames, init_pose=None, init_bone=None):
     kpts_3d = mutils.get_gt_3d(keypoints, frames, LBFGS=True)
     
     valid_3d = kpts_3d[:, -1]>0
+    f = open("3dout.txt", "a")
+    f.write(valid_3d)
+    f.close()
     valid_kpts_3d = kpts_3d[valid_3d, :3]
+    f = open("3dout.txt", "a")
+    f.write(valid_kpts_3d)
+    f.close()
     bird_kpts = bird_kpts[valid_3d, :]
+    f = open("3dout.txt", "a")
+    f.write(bird_kpts)
+    f.close()
     
     # Procrustes with available 3D kpts
     R, t, s = mutils.Procrustes(bird_kpts, valid_kpts_3d)
