@@ -58,13 +58,13 @@ python tools/multiview_demo.py
 ```
 
 ## Bug fixing tips
-Markup: * Downgrade Numpy to version 1.23.5 (this will fix the numpy no Long attribute)
-	* Make sure you are in Python virtual environment when making changes to packages
- 	* Look up errors without the specifics, like file paths and what line the code failed at
-  	* If having trouble with setting up virtualenv use pyenv instead
-   	* Use python version 3.10.10
-    	* If code doesnt run after activating pyenv and pytorch, try activating again. This has made it run
-     	* Check issues on GitHub and see if your problem has come up before and if theres a solution there
+* Downgrade Numpy to version 1.23.5 (this will fix the numpy no Long attribute)
+* Make sure you are in Python virtual environment when making changes to packages
+* Look up errors without the specifics, like file paths and what line the code failed at
+* If having trouble with setting up virtualenv use pyenv instead
+* Use python version 3.10.10
+* If code doesnt run after activating pyenv and pytorch, try activating again. This has made it run
+* Check issues on GitHub and see if your problem has come up before and if theres a solution there
 
 
 ## Citing
